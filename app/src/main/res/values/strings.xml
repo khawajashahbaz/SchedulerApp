@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SchedulerApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="TODO">Todo</string>
+    <string name="Timer">Timer</string>
+    <string name="Done">DONE</string>
+    <string name="Statistics">Statistics</string>
+    <string name="Reset">Reset</string>
+    <string name="question">Are your sure you want to quit timer?
+        Press start to start again and stop to stop notification</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

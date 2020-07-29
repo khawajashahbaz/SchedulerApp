@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Shahbaz.schedulerapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/rigrex"
+
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/rigrex"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+
+            android:name="com.Shahbaz.schedulerapp.activities.AddTask"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.Shahbaz.schedulerapp.activities.AddCategory"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.Shahbaz.schedulerapp.activities.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.Shahbaz.schedulerapp.timerService.NotActionReciever" />
+        <service
+            android:name="com.Shahbaz.schedulerapp.timerService.TimeService"
+            android:exported="true" />
+    </application>
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+</manifest>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".fragments.TimerFragment">
+
+        <RelativeLayout
+            android:id="@+id/layout_timer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/Timer"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/timer_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/Reset"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/timer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/timer_loading"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="60dp"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/timer_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/timer_loading"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:max="100"
+                android:progressDrawable="@drawable/custom_timer_progress"
+                android:rotation="-90"
+                android:secondaryProgress="100" />
+
+            <LinearLayout
+                android:id="@+id/l2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timer_loading"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/timer_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/Done"
+                    android:textColor="@color/white" />
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/timer_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:foregroundGravity="center"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/half_black"
+                    fab:fab_icon="@drawable/ic_play_arrow"
+                    fab:fab_size="normal"
+                    fab:fab_title="Add Category" />
+
+                <Button
+                    android:id="@+id/timer_skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="SKIP"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</layout>
